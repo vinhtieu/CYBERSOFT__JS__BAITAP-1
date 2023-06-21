@@ -13,7 +13,10 @@
 const AMOUNT_PER_HOUR = 100000;
 function calcSalary(days) {
   var salary = days * AMOUNT_PER_HOUR;
-  console.log(`salary: ${salary}`);
+  console.log(`//-----------Tinh lương nhân viên-----------//`);
+  console.log(`Days Of Work: ${days} days`);
+  console.log(`Salary: ${salary.toLocaleString("vi-VN")} VND`);
+  console.log("");
 }
 
 var daysOfWork = 30;
@@ -33,7 +36,10 @@ calcSalary(daysOfWork);
 function calcAverage(num1, num2, num3, num4, num5) {
   var total = num1 + num2 + num3 + num4 + num5;
   var average = total / 5;
-  console.log(`average: ${average}`);
+  console.log("//-----------Tinh Giá Trị Trung Bình-----------//");
+  console.log(`Numbers: ${num1},${num2},${num3},${num4},${num5}`);
+  console.log(`Average: ${average}`);
+  console.log("");
 }
 
 var a = 1;
@@ -59,8 +65,11 @@ calcAverage(a, b, c, d, e);
 const EXCHANGE_RATE_USD_TO_VND = 23500;
 
 function convertCurrency(usd) {
-  var result = usd * EXCHANGE_RATE_USD_TO_VND;
-  console.log(`Result: ${result}`);
+  var vnd = usd * EXCHANGE_RATE_USD_TO_VND;
+  console.log(`//-----------Quy Đổi Tiền-----------//`);
+  console.log(`USD: ${usd.toLocaleString("vi-VN")}`);
+  console.log(`VND: ${vnd.toLocaleString("vi-VN")}`);
+  console.log("");
 }
 
 var usd = 2;
@@ -79,11 +88,20 @@ convertCurrency(usd);
 */
 
 function calcRectangle(width, length) {
-    var area = width * length;
-    var perimeter = 2(width + length);
-    console.log(`area: ${area}`)
-    console.log(`perimeter: ${perimeter}`)
+  var area = width * length;
+  var perimeter = 2 * (width + length);
+  console.log(`//-----------Tính Chu Vi Và Diện Tích-----------//`);
+  console.log(`Width: ${width}`);
+  console.log(`Length: ${length}`);
+  console.log(`--> Area: ${area}`);
+  console.log(`--> Perimeter: ${perimeter}`);
+  console.log("");
 }
+
+var width = 10;
+var length = 5;
+
+calcRectangle(width, length);
 
 //-----------Tính Tổng Ký Số-----------//
 
@@ -101,8 +119,14 @@ function calcRectangle(width, length) {
 */
 
 function add(num) {
-    var x = num / 10;
-    var y = num % 10;
-    var total = x + y;
-    console.log(`total: ${total}`)
+  var x = num % 10;
+  var y = num / 10;
+  var total = x + y;
+  console.log(`//-----------Tính Tổng Ký Số-----------//`);
+  console.log(`Number: ${num}`);
+  console.log(`total: ${Math.floor(total)}`);
+  console.log("");
 }
+
+var num = 12;
+add(num);
